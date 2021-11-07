@@ -1,0 +1,25 @@
+{
+  "name": "E-commerce-back-end-week-13",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmartin1985/E-commerce-back-end-week-13.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmartin1985/E-commerce-back-end-week-13/issues"
+  },
+  "homepage": "https://github.com/rmartin1985/E-commerce-back-end-week-13#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mysql2": "^2.3.3-rc.0",
+    "sequelize": "^6.9.0"
+  }
+}
