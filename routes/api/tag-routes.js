@@ -9,10 +9,10 @@ router.get('/', (req, res) => {
   Tag.findAll({
     include: [
       {
-      model: Product,
-      attributes: ['product_name', 'price', 'stock', 'category_id']
-    }
-  ]
+        model: Product,
+        attributes: ['product_name', 'price', 'stock', 'category_id']
+      }
+    ]
   })
     .then(dbTagData => res.json(dbTagData))
     .catch(err => {
@@ -36,7 +36,13 @@ router.get('/:id', (req, res) => {
       }
     ]
   })
-    .then(dbTagData => res.status(dbTagData))
+    .then(dbTagData => {
+      if (!dbTagData) {
+        res.status(404).json({ message: "No tag found with that id!" });
+        return;
+      }
+      res.json(dbTagData);
+    })
     .catch(err => {
       console.log(err);
       res.status(500).json(err);
